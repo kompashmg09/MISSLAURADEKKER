@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0a1a2f, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* ===== PARTIKEL ===== */
+.particles {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.particles span {
+  position: absolute;
+  bottom: -50px;
+  width: 6px;
+  height: 6px;
+  background: #00bfff;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00bfff;
+  animation: rise 10s linear infinite;
+  opacity: 0.7;
+}
+
+.particles span:nth-child(even) {
+  width: 8px;
+  height: 8px;
+  animation-duration: 8s;
+}
+
+.particles span:nth-child(odd) {
+  width: 4px;
+  height: 4px;
+  animation-duration: 12s;
+}
+
+@keyframes rise {
+  from { transform: translateY(0); }
+  to { transform: translateY(-110vh); }
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* ===== LOGO ===== */
+.logo img {
+  width: 120px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 15px gold);
+}
+
+/* ===== KARAKTER ===== */
+.character {
+  width: 260px;
+  margin: 0 auto 25px;
+  animation: float 5s ease-in-out infinite;
+}
+
+.character img {
+  width: 100%;
+  border-radius: 20px;
+  filter: drop-shadow(0 0 30px #00bfff);
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* ===== TEXT ===== */
+h1 {
+  font-size: 42px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px red;
+}
+
+.tagline {
+  margin-top: 8px;
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+/* ===== CARD ===== */
+.card {
+  margin-top: 30px;
+  padding: 25px 35px;
+  background: rgba(0,0,0,0.45);
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0,191,255,0.3);
+}
+
+.card p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: linear-gradient(45deg, red, #ff4d4d);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  color: red;
+  box-shadow: 0 0 25px white;
+}
